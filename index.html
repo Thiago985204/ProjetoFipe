@@ -1,0 +1,29 @@
+<!doctype html>
+<html ng-app="ProjetoFipe" lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="arquivosJS/angular.js"></script>
+    <script src="indexController.js"></script>
+    <script src="arquivosJS/angular-route.min.js"></script>
+</head>
+
+<body data-ng-controller="controladorDaPagina as vm">
+
+    <body>
+        <h1>{{vm.marcaSelecionada.nome}} </h1>
+        <form>
+            <select ng-options="x.nome for x in vm.dados"
+            ng-model="vm.marcaSelecionada" 
+            ng-change="vm.buscarModelos(vm.marcaSelecionada)" ></select>
+        
+
+            <button ng-click="vm.buscarMarcas()" type="button" class="btn btn-success">Success</button>
+        </form>
+    </body>
+
+</html>
