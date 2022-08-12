@@ -2,7 +2,6 @@ angular.module("ProjetoFipe", []);
     angular.module("ProjetoFipe").controller("controladorDaPagina", function($scope, $timeout,$http){
         vm = this;
         vm.dados;
-        //oi tio m;k
         vm.marcaSelecionada;
 
         vm.buscarModelos = function(marca){
